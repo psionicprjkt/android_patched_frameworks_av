@@ -159,6 +159,11 @@ private:
     int32_t mGeneration;
 
     DISALLOW_EVIL_CONSTRUCTORS(MediaCodecSource);
+
+// add for mtk avoid timeUs back when resume after pause.
+    int64_t mLastTimeUs;
+    bool mFrameDropped;
+// ~add for mtk
 };
 
 } // namespace android
